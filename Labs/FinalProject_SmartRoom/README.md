@@ -1,6 +1,6 @@
 # Final Project — Smart Room Monitor
 
-> **เริ่มยังไง:** copy โฟลเดอร์ `STM32_Lab_Starter` ไปไว้ใน `C:\Users\<ชื่อ>\UnityMbed\` เปลี่ยนชื่อเป็นชื่อ Lab นี้ → UnityMbed IDE → Open Project → วาง Prompt จาก `prompt.txt` ใน AI Chat → Build → Flash
+> **เริ่มยังไง:** โฟลเดอร์นี้เป็นโปรเจกต์เปล่าพร้อมใช้ (`src/main.c` ว่าง · มี `startup.c` `usb_serial` ให้แล้ว) → UnityMbed IDE → **Open Project** → เลือกโฟลเดอร์นี้ → วาง Prompt จาก `prompt.txt` ใน AI Chat → Build → Flash
 
 **อุปกรณ์:** ใช้ของทั้งหมด (DHT11, OLED, ปุ่ม, LED)
 
@@ -17,7 +17,7 @@
 BOOT -> LEARNING x/15 -> NORMAL หรือ !! ALERT !! พร้อม Temp, Humi, Next (ค่าทำนาย)
 
 ## วิธีทำ: สร้างใหม่ทีละขั้น (ทวนการเขียน Prompt)
-1. copy โฟลเดอร์ `STM32_Lab_Starter` เป็นโปรเจกต์ใหม่ แล้ว Open Project ใน IDE แล้วเขียน Prompt เองด้วย C.L.E.A.R.
+1. Open Project โฟลเดอร์ Lab นี้ใน IDE (โปรเจกต์เปล่าพร้อมใช้) แล้วเขียน Prompt เองด้วย C.L.E.A.R.
 2. Prompt แรก: Boot 2 วิ + Temp Humi บนจอ → Build + Flash
 3. Refine: เพิ่มค่าทำนาย Linear Regression → เทสต์
 4. Refine: เรียนรู้ความชื้น 15 ค่า + ALERT → เทสต์

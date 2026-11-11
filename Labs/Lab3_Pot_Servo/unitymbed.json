@@ -1,0 +1,23 @@
+{
+  "name": "Lab3_Pot_Servo",
+  "mcu": "stm32",
+  "version": "0.1.0",
+  "sdk": "bare-metal",
+  "dependencies": {},
+  "build": {
+    "optimization": "-Os",
+    "defines": []
+  },
+  "openocd_cfg": "openocd.cfg",
+  "stm32": {
+    "line": "STM32F103C8T6",
+    "devId": "0x0",
+    "cpu": "cortex-m3",
+    "flashKB": 64,
+    "ramKBMin": 6,
+    "detected": true,
+    "flashDriver": "stm32f1x",
+    "flashSupported": true,
+    "openocd": "xpack"
+  }
+}

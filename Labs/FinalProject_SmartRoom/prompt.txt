@@ -1,5 +1,5 @@
 Final Project — Smart Room Monitor
-copy โฟลเดอร์ STM32_Lab_Starter เป็นโปรเจกต์ใหม่ แล้ว Open Project ใน IDE แล้วเขียน Prompt เองด้วย C.L.E.A.R.
+Open Project โฟลเดอร์ Lab นี้ใน IDE (โปรเจกต์เปล่าพร้อมใช้) แล้วเขียน Prompt เองด้วย C.L.E.A.R.
 ทำทีละขั้น: Prompt แรก -> Build + Flash -> Refine ทีละอย่าง -> Build + Flash ทุกครั้ง
 
 ===== Prompt แรก (ในสไลด์) =====

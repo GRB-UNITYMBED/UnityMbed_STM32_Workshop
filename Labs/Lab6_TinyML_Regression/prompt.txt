@@ -1,7 +1,7 @@
-Lab 6 — เริ่มจาก STM32_Lab_Starter แล้วสั่งทีละขั้น (2 ครั้ง)
-ก่อนเริ่ม: copy โฟลเดอร์ STM32_Lab_Starter เป็นโปรเจกต์ใหม่ แล้ว Open Project ใน IDE (มี usb_serial.c ใน src/ และ usb_serial.h ใน inc/ แล้ว)
+Lab 6 — เริ่มจากโปรเจกต์เปล่าในโฟลเดอร์นี้ แล้วสั่งทีละขั้น (2 ครั้ง)
+ก่อนเริ่ม: Open Project โฟลเดอร์ Lab นี้ใน IDE (โปรเจกต์เปล่าพร้อมใช้ มี usb_serial.c ใน src/ และ usb_serial.h ใน inc/ แล้ว)
 
-===== Prompt 6.1 (โปรเจกต์ใหม่จาก Starter) =====
+===== Prompt 6.1 (โปรเจกต์เปล่าในโฟลเดอร์ Lab) =====
 ใช้ชิป STM32F103C8T6 (Blue Pill) แบบ bare metal ไม่ใช้ HAL ในโปรเจกต์มี usb_serial.h และ usb_serial.c ให้แล้ว (ห้ามแก้): include "usb_serial.h" แล้วเรียก usb_serial_init() บรรทัดแรกของ main ฟังก์ชันนี้ตั้ง CPU เป็น 72 MHz (APB1 36 MHz, TIM3 72 MHz) ให้คำนวณเวลาทั้งหมดจาก 72 MHz อ่านอุณหภูมิจาก DHT11 ที่ PB12 ทุก 2 วินาที แสดงบนจอ OLED SSD1306 ผ่าน I2C1 (PB6 SCL, PB7 SDA) บรรทัดบนสุดเขียน TinyML Regression ใต้ลงมาเขียน Act: ตามด้วยอุณหภูมิ ตารางฟอนต์ 5x7 ใส่เฉพาะตัวที่ใช้ Reset_Handler และ vector table อยู่ใน startup.c แล้ว ห้ามเขียนซ้ำ ห้ามใช้ printf และ float ตอบ main.c ทั้งไฟล์ ไม่ต้องอธิบาย
 
 -> Build + Flash ให้ผ่านก่อน (จอขึ้น TinyML Regression / Act: 28)

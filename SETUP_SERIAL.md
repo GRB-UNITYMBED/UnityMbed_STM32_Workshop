@@ -2,7 +2,7 @@
 
 ไม่ต้องใช้ USB-TTL และ Windows 10/11 ไม่ต้องลงไดรเวอร์
 
-1. ใช้โปรเจกต์ที่ copy จาก `STM32_Lab_Starter` (มี `usb_serial.c` ใน `src/` และ `usb_serial.h` ใน `inc/` แล้ว) แล้ว Build → Flash โค้ดที่เรียก `usb_serial_init()`
+1. ใช้โปรเจกต์ในโฟลเดอร์ `Labs/` (หรือ `STM32_Lab_Starter`) (มี `usb_serial.c` ใน `src/` และ `usb_serial.h` ใน `inc/` แล้ว) แล้ว Build → Flash โค้ดที่เรียก `usb_serial_init()`
 2. เสียบ **Micro-USB ของบอร์ด** เข้าคอม (เสียบคู่กับ ST-LINK ได้เลย)
 3. Device Manager → **Ports (COM & LPT)** จะเห็น `USB Serial Device (COMx)` จดเลข COM ไว้
 4. UnityMbed IDE → แท็บ **Serial** → กด **List** → เลือก COM ของบอร์ด → Connect (baud เลือกค่าไหนก็ได้)

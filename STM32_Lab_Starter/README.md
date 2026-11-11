@@ -1,11 +1,10 @@
-# STM32_Lab_Starter — โปรเจกต์ตั้งต้นสำหรับทุก Lab
+# STM32_Lab_Starter — โปรเจกต์เปล่าต้นแบบ
 
 Blank project ของ UnityMbed (STM32F103C8T6 Blue Pill · bare metal · ไม่ใช้ HAL) จัดไฟล์แบบโปรเจกต์จริง: `.c` ใน `src/` · `.h` ใน `inc/`
 
 ## วิธีใช้
-1. Copy โฟลเดอร์นี้ไปไว้ใน `C:\Users\<ชื่อ>\UnityMbed\` แล้วเปลี่ยนชื่อเป็นชื่อ Lab (เช่น `lab2`)
-2. UnityMbed IDE → Open Project → เลือกโฟลเดอร์นั้น
-3. วาง prompt ของ Lab ใน AI Chat → AI เขียนโค้ดลง `src/main.c` → Build → Flash
+- **ในคอร์ส:** ไม่ต้อง copy โฟลเดอร์นี้ — ทุกโฟลเดอร์ใน `Labs/` มีโปรเจกต์เปล่าแบบเดียวกันนี้ใส่ไว้ให้แล้ว Open Project โฟลเดอร์ Lab ได้เลย
+- **ทำโปรเจกต์ของตัวเอง:** copy โฟลเดอร์นี้ไปไว้ใน `C:\Users\<ชื่อ>\UnityMbed\` แล้วเปลี่ยนชื่อ → UnityMbed IDE → Open Project → สั่ง AI เขียนลง `src/main.c` → Build → Flash
 
 ## มีอะไรบ้าง
 ```

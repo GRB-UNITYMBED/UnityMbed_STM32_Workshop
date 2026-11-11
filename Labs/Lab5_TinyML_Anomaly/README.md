@@ -1,6 +1,6 @@
 # Lab5 TinyML Anomaly — TinyML: ชิปเรียนรู้ค่าปกติแล้วจับความผิดปกติ
 
-> **เริ่มยังไง:** copy โฟลเดอร์ `STM32_Lab_Starter` ไปไว้ใน `C:\Users\<ชื่อ>\UnityMbed\` เปลี่ยนชื่อเป็นชื่อ Lab นี้ → UnityMbed IDE → Open Project → วาง Prompt จาก `prompt.txt` ใน AI Chat → Build → Flash
+> **เริ่มยังไง:** โฟลเดอร์นี้เป็นโปรเจกต์เปล่าพร้อมใช้ (`src/main.c` ว่าง · มี `startup.c` `usb_serial` ให้แล้ว) → UnityMbed IDE → **Open Project** → เลือกโฟลเดอร์นี้ → วาง Prompt จาก `prompt.txt` ใน AI Chat → Build → Flash
 
 **อุปกรณ์:** ใช้ของจาก Lab 4 + ปุ่มกด
 
@@ -22,8 +22,8 @@ Learning 1/15 ... 15/15 (30 วินาที) -> Normal -> กำเซนเ�
 - ตัวอย่าง Mean 28, SD 2 → 26–30 °C = Normal · 31 ขึ้นไป หรือ 25 ลงมา = ANOMALY
 - วัดได้ 30 ยังปกติ เพราะห่าง 2 ยังไม่เกิน 2
 
-## วิธีทำ: เริ่มจาก STM32_Lab_Starter แล้วสั่งทีละขั้น (2 ครั้ง)
-1. copy โฟลเดอร์ `STM32_Lab_Starter` เป็นโปรเจกต์ใหม่ แล้ว Open Project ใน IDE
+## วิธีทำ: เริ่มจากโปรเจกต์เปล่าในโฟลเดอร์นี้ แล้วสั่งทีละขั้น (2 ครั้ง)
+1. Open Project โฟลเดอร์ Lab นี้ใน IDE (โปรเจกต์เปล่าพร้อมใช้)
 2. Prompt 5.1: อ่านอุณหภูมิ + เรียนรู้ 15 ค่า + แสดง T.Mean T.SD Temp → Build + Flash
 3. Prompt 5.2 (แชทเดิม): ANOMALY + LED + ปุ่มเรียนใหม่ → Build + Flash
 

@@ -1,6 +1,6 @@
 # Lab3 Pot Servo — หมุนวอลุ่มคุม Servo
 
-> **เริ่มยังไง:** copy โฟลเดอร์ `STM32_Lab_Starter` ไปไว้ใน `C:\Users\<ชื่อ>\UnityMbed\` เปลี่ยนชื่อเป็นชื่อ Lab นี้ → UnityMbed IDE → Open Project → วาง Prompt จาก `prompt.txt` ใน AI Chat → Build → Flash
+> **เริ่มยังไง:** โฟลเดอร์นี้เป็นโปรเจกต์เปล่าพร้อมใช้ (`src/main.c` ว่าง · มี `startup.c` `usb_serial` ให้แล้ว) → UnityMbed IDE → **Open Project** → เลือกโฟลเดอร์นี้ → วาง Prompt จาก `prompt.txt` ใน AI Chat → Build → Flash
 
 **อุปกรณ์:** Potentiometer 10k, Servo SG90
 

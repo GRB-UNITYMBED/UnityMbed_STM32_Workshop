@@ -1,6 +1,6 @@
 # Lab6 TinyML Regression — TinyML: ทำนายอุณหภูมิด้วย Linear Regression บนชิป
 
-> **เริ่มยังไง:** copy โฟลเดอร์ `STM32_Lab_Starter` ไปไว้ใน `C:\Users\<ชื่อ>\UnityMbed\` เปลี่ยนชื่อเป็นชื่อ Lab นี้ → UnityMbed IDE → Open Project → วาง Prompt จาก `prompt.txt` ใน AI Chat → Build → Flash
+> **เริ่มยังไง:** โฟลเดอร์นี้เป็นโปรเจกต์เปล่าพร้อมใช้ (`src/main.c` ว่าง · มี `startup.c` `usb_serial` ให้แล้ว) → UnityMbed IDE → **Open Project** → เลือกโฟลเดอร์นี้ → วาง Prompt จาก `prompt.txt` ใน AI Chat → Build → Flash
 
 **อุปกรณ์:** ใช้ของจาก Lab 4
 
@@ -20,8 +20,8 @@
 - **Loss** = (Pred − Act)² = ทายผิดมากแค่ไหน
 - ทุกรอบชิปใช้ Loss ปรับ w กับ b (Gradient Descent) · Loss ลดลงเข้าใกล้ 0 = ทายแม่นขึ้น
 
-## วิธีทำ: เริ่มจาก STM32_Lab_Starter แล้วสั่งทีละขั้น (2 ครั้ง)
-1. copy โฟลเดอร์ `STM32_Lab_Starter` เป็นโปรเจกต์ใหม่ แล้ว Open Project ใน IDE (มี `usb_serial` ให้แล้ว)
+## วิธีทำ: เริ่มจากโปรเจกต์เปล่าในโฟลเดอร์นี้ แล้วสั่งทีละขั้น (2 ครั้ง)
+1. Open Project โฟลเดอร์ Lab นี้ใน IDE (โปรเจกต์เปล่าพร้อมใช้ มี `usb_serial` ให้แล้ว)
 2. Prompt 6.1: จอขึ้น TinyML Regression + Act: → Build + Flash
 3. Prompt 6.2 (แชทเดิม): Linear Regression + Pred + Loss + ส่ง Serial → Build + Flash
 4. เปิด Serial Plotter (เลือก COM ของบอร์ด) ดูกราฟ Act / Pred / Loss

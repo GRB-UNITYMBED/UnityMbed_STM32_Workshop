@@ -1,5 +1,5 @@
 Challenge — แยก Final Project เป็นไฟล์ .c / .h
-ทำต่อในโปรเจกต์ Final Project ของคุณที่ Build + Flash ผ่านแล้ว (มาจาก STM32_Lab_Starter จึงมี inc/ และ -Iinc ใน Makefile อยู่แล้ว)
+ทำต่อในโปรเจกต์ Labs/FinalProject_SmartRoom ของคุณที่ Build + Flash ผ่านแล้ว (มี inc/ และ -Iinc ใน Makefile อยู่แล้ว)
 สั่งทีละโมดูล -> Build + Flash ให้ผ่าน -> ค่อยสั่งโมดูลถัดไป
 
 ===== 1. จอ OLED + I2C =====

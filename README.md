@@ -4,16 +4,16 @@
 บอร์ด: **STM32F103C8T6 (Blue Pill)** + ST-LINK V2 · โปรเจกต์ Blank ของ UnityMbed (bare metal, ไม่ใช้ HAL)
 
 ## วิธีเรียนแต่ละ Lab
-1. Copy โฟลเดอร์ **`STM32_Lab_Starter`** ไปไว้ใน `C:\Users\<ชื่อ>\UnityMbed\` แล้วเปลี่ยนชื่อเป็นชื่อ Lab (เช่น `lab2`) → UnityMbed IDE → Open Project → เลือกโฟลเดอร์นั้น
-   (Starter = `main.c` เปล่า · `startup.c` + `usb_serial.c` ใน `src/` · `usb_serial.h` ใน `inc/` ไม่ต้องสร้างโปรเจกต์ ไม่ต้อง Add files)
-2. เปิด `Labs/<ชื่อ Lab>/prompt.txt` → Copy prompt ไปวางใน **AI Chat** → AI เขียน `main.c` ให้
+1. แตกไฟล์ / clone repo ไว้ที่ไหนก็ได้ (แนะนำ `C:\Users\<ชื่อ>\UnityMbed\`) → UnityMbed IDE → **Open Project** → เลือกโฟลเดอร์ `Labs/<ชื่อ Lab>`
+   (ทุกโฟลเดอร์ Lab เป็นโปรเจกต์เปล่าพร้อม build: `src/main.c` ว่าง · `startup.c` + `usb_serial.c` ใน `src/` · `usb_serial.h` ใน `inc/` ไม่ต้อง copy ไม่ต้องสร้างโปรเจกต์ ไม่ต้อง Add files)
+2. เปิด `prompt.txt` ในโฟลเดอร์ Lab นั้น → Copy prompt ไปวางใน **AI Chat** → AI เขียน `main.c` ให้
 3. กด **Build** → **Flash** → ดูผลบนบอร์ด (วิธีต่อวงจรและผลที่ควรเห็นอยู่ใน `Labs/<ชื่อ Lab>/README.md`)
 4. ไม่ผ่าน? Copy Error ให้ AI แก้ได้ไม่เกิน 2 รอบ (ดูสไลด์ "แก้โค้ดด้วย AI")
 5. ยังไม่ผ่าน → ยกมือ / ขอ **ชุดเฉลย** จากวิทยากร
 
 | โฟลเดอร์ | เนื้อหา | อุปกรณ์เพิ่ม |
 |---|---|---|
-| `STM32_Lab_Starter` | โปรเจกต์ตั้งต้น — copy ไปใช้ทุก Lab | — |
+| `STM32_Lab_Starter` | โปรเจกต์เปล่าต้นแบบ — copy ไปทำโปรเจกต์ของตัวเองหลังคอร์ส | — |
 | `Labs/Lab1_Blink` | ไฟกะพริบ PC13 + ให้ AI อธิบายโค้ด | — |
 | `Labs/Lab2_Button_Serial` | ปุ่มกด นับครั้ง LED กะพริบตามจำนวน + ส่งขึ้น Serial | ปุ่ม, สาย Micro-USB |
 | `Labs/Lab3_Pot_Servo` | วอลุ่มคุม Servo + ดูค่าดิบ vs ค่าที่กรองใน Serial | Potentiometer, Servo SG90 |
