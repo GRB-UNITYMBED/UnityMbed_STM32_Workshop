@@ -1,0 +1,4 @@
+ใช้ชิป STM32F103C8T6 (Blue Pill) แบบ bare metal ไม่ใช้ HAL ในโปรเจกต์มี usb_serial.h และ usb_serial.c ให้แล้ว (ห้ามแก้): include "usb_serial.h" แล้วเรียก usb_serial_init() บรรทัดแรกของ main ฟังก์ชันนี้ตั้ง CPU เป็น 72 MHz (APB1 36 MHz, TIM3 72 MHz) ให้คำนวณเวลาทั้งหมดจาก 72 MHz ปุ่มกดต่อที่ PA0 ลง GND ใช้ internal pull-up นับจำนวนครั้งที่กดโดยมี debounce 50 ms ทุกครั้งที่กดให้ LED ที่ PC13 กะพริบตามจำนวนครั้งที่กด (1 ถึง 5 แล้ววนกลับ 1) แบบไม่หน่วงเวลาค้าง และส่งข้อความ Count: n ออก Serial ด้วย usb_print() และ usb_print_int() แก้ลงใน main.c อธิบายสั้น ๆ ห้ามใช้ printf และ float (โปรเจกต์ build แบบ -nostdlib)
+
+--- Challenge ---
+ถ้ากดปุ่มค้าง 2 วินาที ให้รีเซ็ตตัวนับเป็น 0 และส่งข้อความ Reset

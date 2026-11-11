@@ -1,0 +1,26 @@
+Lab 6 — เริ่มจาก STM32_Lab_Starter แล้วสั่งทีละขั้น (2 ครั้ง)
+ก่อนเริ่ม: copy โฟลเดอร์ STM32_Lab_Starter เป็นโปรเจกต์ใหม่ แล้ว Open Project ใน IDE (มี usb_serial.c ใน src/ และ usb_serial.h ใน inc/ แล้ว)
+
+===== Prompt 6.1 (โปรเจกต์ใหม่จาก Starter) =====
+ใช้ชิป STM32F103C8T6 (Blue Pill) แบบ bare metal ไม่ใช้ HAL ในโปรเจกต์มี usb_serial.h และ usb_serial.c ให้แล้ว (ห้ามแก้): include "usb_serial.h" แล้วเรียก usb_serial_init() บรรทัดแรกของ main ฟังก์ชันนี้ตั้ง CPU เป็น 72 MHz (APB1 36 MHz, TIM3 72 MHz) ให้คำนวณเวลาทั้งหมดจาก 72 MHz อ่านอุณหภูมิจาก DHT11 ที่ PB12 ทุก 2 วินาที แสดงบนจอ OLED SSD1306 ผ่าน I2C1 (PB6 SCL, PB7 SDA) บรรทัดบนสุดเขียน TinyML Regression ใต้ลงมาเขียน Act: ตามด้วยอุณหภูมิ ตารางฟอนต์ 5x7 ใส่เฉพาะตัวที่ใช้ Reset_Handler และ vector table อยู่ใน startup.c แล้ว ห้ามเขียนซ้ำ ห้ามใช้ printf และ float ตอบ main.c ทั้งไฟล์ ไม่ต้องอธิบาย
+
+-> Build + Flash ให้ผ่านก่อน (จอขึ้น TinyML Regression / Act: 28)
+
+===== Prompt 6.2 (Refine ในแชทเดิม) =====
+เพิ่ม: Linear Regression แบบ Gradient Descent เรียนรู้บนชิป ทำนายอุณหภูมิถัดไปจากค่าก่อนหน้า (Pred = w × x + b) ใช้จำนวนเต็ม (fixed-point) แทน float ทุกรอบปรับ w, b จาก Error บนจอแสดง Act: Pred: Loss: คนละแถว รอบแรกที่ยังไม่มีค่าก่อนหน้าให้ขึ้น Init... ส่ง Serial ทุกรอบด้วย usb_print / usb_print_int รูปแบบ Act: x Pred: y Loss: z ห้ามแก้ส่วนอื่น
+
+ผลที่ควรเห็นบนจอ:
+  TinyML Regression
+  Act:  28
+  Pred: 27
+  Loss: 1
+Serial Monitor / Plotter: เลือก COM ของบอร์ด (Micro-USB) แล้วกด List ก่อน
+
+--- ถ้าพัง (Fix with AI ไม่เกิน 2 รอบ) ---
+Build error: วาง Error แล้วสั่ง "แก้เฉพาะจุดที่ผิด ห้ามแก้ส่วนอื่นที่ทำงานได้แล้ว"
+AI ตอบไม่จบ / ไฟล์มี ``` ปน: "โค้ดยาวเกินจนตอบไม่จบ เขียน main.c ใหม่ทั้งไฟล์ให้สั้นลง ฟอนต์ใส่เฉพาะตัวที่ใช้ ไม่ต้องอธิบาย"
+Loss พุ่งขึ้นเรื่อย ๆ หรือ Pred เพี้ยนไกล: "ลด learning rate ลงให้ Loss ค่อย ๆ ลด ห้ามแก้ส่วนอื่น"
+2 รอบยังไม่ผ่าน: ย้อนไป main.c ของขั้นก่อนที่ใช้ได้ ถ้ายังไม่ได้ ขอชุดเฉลยจากวิทยากร
+
+--- Challenge ---
+ให้จอแสดงค่า w และ b ด้วย แล้วดูว่าเปลี่ยนไปยังไงเมื่อกำเซนเซอร์ให้อุ่นขึ้น

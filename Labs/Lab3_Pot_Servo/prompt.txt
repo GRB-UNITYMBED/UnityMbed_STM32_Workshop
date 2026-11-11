@@ -1,0 +1,4 @@
+ใช้ชิป STM32F103C8T6 (Blue Pill) แบบ bare metal ไม่ใช้ HAL ในโปรเจกต์มี usb_serial.h และ usb_serial.c ให้แล้ว (ห้ามแก้): include "usb_serial.h" แล้วเรียก usb_serial_init() บรรทัดแรกของ main ฟังก์ชันนี้ตั้ง CPU เป็น 72 MHz (APB1 36 MHz, TIM3 72 MHz) ให้คำนวณเวลาทั้งหมดจาก 72 MHz อ่านค่า Potentiometer ที่ PA1 ด้วย ADC แล้วแปลงเป็นมุม 0-180 องศา สั่ง Servo ที่ PA6 ด้วย PWM ของ TIM3 ความถี่ 50 Hz กรองค่าให้นิ่งด้วยค่าเฉลี่ยเคลื่อนที่ ส่งค่า ADC ดิบ ค่าที่กรองแล้ว และมุม ออก Serial ด้วย usb_print() และ usb_print_int() ทุก 100 ms แก้ลงใน main.c ห้ามใช้ printf และ float (โปรเจกต์ build แบบ -nostdlib)
+
+--- Challenge ---
+ให้ Servo ล็อกตำแหน่งเป็น 5 ระดับ ทุก 45 องศา เหมือนสวิตช์พัดลม และแสดงเลขระดับใน Monitor
